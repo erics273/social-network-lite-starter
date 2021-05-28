@@ -25,7 +25,7 @@ function Header(props) {
     .catch((error) => {
       console.log(error)
       // handle error
-      // setErrorMessage(error.response.data.message)
+      setErrorMessage(error.response.data.message)
     })
   }
 
@@ -52,7 +52,7 @@ function Header(props) {
         <Navbar.Brand as={Link} to="/">Social Network Lite</Navbar.Brand>
         {authLinks}
       </Navbar>
-      {errorMessage && <div className="container"><Alert variant="danger">{errorMessage}</Alert></div>}
+      {errorMessage && <div className="container mt-3"><Alert variant="danger">{errorMessage}</Alert></div>}
     </div>
   );
 }

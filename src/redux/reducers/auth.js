@@ -17,7 +17,6 @@ const getInitStateFromStorage = (key, initialState) => {
           property => storedState[property] !== undefined
         );
       if (unchangedInitialStateProps) {
-        console.log(storedState, "stored")
         return storedState;
       }
     }
