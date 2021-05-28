@@ -35,7 +35,8 @@ export default function authReducer(state = getInitStateFromStorage("auth", init
                 username: action.payload.username
             }
         );
-
+    case types.LOGOUT:
+        return Object.assign({}, initialState);
     default:
       return state;
   }

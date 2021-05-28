@@ -8,7 +8,7 @@ import * as authActions from "../../redux/actions/auth";
 import { bindActionCreators } from "redux";
 
 import APIService from "../../apiService";
-import { Redirect } from "react-router-dom";
+import { Redirect, withRouter } from "react-router-dom";
 
 class Login extends Component {
 
@@ -50,7 +50,9 @@ class Login extends Component {
 
     render() {
         if(this.state.success){
-            // return <Redirect to="/home" />
+            const params = new URLSearchParams(this.props.location.search);
+            const redirect = params.get('redirect'); 
+            return <Redirect to={(redirect) ? redirect : "/feed"} />
         }
         return (
             <div className="Login container">
@@ -79,7 +81,7 @@ class Login extends Component {
 
 function mapStateToProps(state) {
     return {
-        login: state.auth,
+        auth: state.auth,
     };
 }
 
@@ -92,4 +94,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Login);
+)(withRouter(Login));
