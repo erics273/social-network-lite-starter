@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+## Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You will be working in teams to build a small social media site. You will be given a back-end API for you to form your front-end application around. The API will include endpoints relating to authentication, users, posts, and likes. 
 
-## Available Scripts
+You will also be following the SCRUM process and everyone will be a developer and individual contributor.
 
-In the project directory, you can run:
+### Learning Objectives
 
-### `yarn start`
+- Practice building larger applications with React
+- Practice building a system architecture for an application
+- Practice reading and understanding a 3rd-party back-end API
+- Practice using a UI component library
+- Practice following SCRUM processes and understanding/practicing SCRUM roles
+- Practice communicating/working together as a team
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started...
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+We will specify the API you will be using to build your project, but the design, layout, and component architecture will be up to you
 
-### `yarn test`
+1. Familiarize yourself with the [SocialNetworkLite API](https://socialnetworklite.herokuapp.com/)
+2. Mock out possible screens
+3. Break screens out into possible component names
+4. Discuss at what point will you hit the API, use local state, use centralized state, and how components will get the props they need to render
+5. Discuss and research what UI component library you would like to use and which components you will use. [React Bootstrap](https://react-bootstrap.github.io/) is already included and being used to style the exisiting components.
+6. We recommend experimenting with some components to get comfortable with how they work and which components you could use for which parts of your application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. Begin creating/using components to establish a general foundation of your app
 
-### `yarn build`
+A starter scaffolding is provided here: [social-network-lite-starter](https://github.com/erics273/social-network-lite-starter)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The API you will communicate with is the [SocialNetworkLite API](https://socialnetworklite.herokuapp.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Submission
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- GitHub repo url - this is the url that has your frontend SocialNetworkLite project source code
+- SCRUM board - this shows your scrum board which has tickets with descriptions and assignees. It could be a github project board or similar.
