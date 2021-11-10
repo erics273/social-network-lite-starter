@@ -48,17 +48,21 @@ class Login extends Component {
     }
 
     render() {
+        const params = new URLSearchParams(this.props.location.search);
+        const flashMessage = params.get('message');
         if (this.state.success) {
-            const params = new URLSearchParams(this.props.location.search);
             const redirect = params.get('redirect');
-            return <Redirect to={(redirect) ? redirect : "/feed"} />
+            return <Redirect to={(redirect) ? redirect : "/protected"} />
         }
         return (
             <div className="LoginForm">
 
                 <Header />
 
-                {this.state.errorMessage && <Alert variant="danger">{this.state.errorMessage}</Alert>}
+                <div className="container">
+                    {this.state.errorMessage && <Alert variant="danger">{this.state.errorMessage}</Alert>}
+                    {flashMessage && <Alert variant="info">{flashMessage}</Alert>}
+                </div>
 
                 <LoginForm
                     handleChange={this.handleChange}

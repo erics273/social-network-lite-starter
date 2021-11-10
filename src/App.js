@@ -1,9 +1,10 @@
 import { Switch, Route } from "react-router-dom";
 
 import Home from "./pages/home/Home";
-import Feed from "./pages/feed/Feed";
+import Protected from "./pages/protected/Protected";
 import Login from "./pages/login/Login";
 import NotFound from "./pages/notFound/NotFound";
+import Register from "./pages/register/Register";
 
 function App() {
   return (
@@ -21,8 +22,13 @@ function App() {
         />
         <Route
           exact
-          path="/feed"
-          component={Feed}
+          path="/register"
+          component={Register}
+        />
+        <Route
+          exact
+          path="/protected"
+          component={Protected}
         />
         <Route
           exact

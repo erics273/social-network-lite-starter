@@ -2,12 +2,11 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-function RegisterForm({ handleChange, handleSubmit, formData }) {
+function UserForm({ handleChange, handleSubmit, formData }) {
 
     return (
-        <div className="RegisterForm container">
+        <div className="UserForm container">
 
-            <h3 className="text-center" >Create an Account!</h3>
             <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="firstName">
                     <Form.Label><strong>First Name:</strong></Form.Label>
@@ -35,4 +34,4 @@ function RegisterForm({ handleChange, handleSubmit, formData }) {
 
 }
 
-export default RegisterForm
+export default UserForm

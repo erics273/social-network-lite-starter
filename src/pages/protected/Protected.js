@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import mustBeAuthenticated from "../../redux/hoc/mustBeAuthenticated";
 import Header from "../../components/header/Header";
 
-class Feed extends Component {
+class Protected extends Component {
 
     render() {
         return (
-            <div className="Feed">
+            <div className="Protected">
                 <Header isAuthenticated={this.props.isAuthenticated} />
                 <div className="container">
-                    <h2>Post Feed</h2>
+                    <h2>Protected Content</h2>
                 </div>
             </div>
         );
     }
 }
 
-export default mustBeAuthenticated(Feed);
+export default mustBeAuthenticated(Protected);

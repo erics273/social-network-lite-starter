@@ -2,11 +2,12 @@ import { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Alert from 'react-bootstrap/Alert';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import { connect } from "react-redux";
 import * as authActions from "../../redux/actions/auth";
 import { bindActionCreators } from "redux";
+
 
 import AuthService from "../../authService";
 
@@ -34,8 +35,8 @@ function Header(props) {
       <Navbar.Text className="font-weight-bold mx-3">
         Welcome, Guest
       </Navbar.Text>
-      <Nav.Link as={Link} to="/login">Sign in</Nav.Link>
-      <Nav.Link as={Link} to="/register">Register</Nav.Link>
+      <Nav.Link as={Link} to="/login" href="/login">Sign in</Nav.Link>
+      <Nav.Link as={Link} to="/register" href="/register">Register</Nav.Link>
     </>
   )
   if (props.isAuthenticated) {
@@ -55,7 +56,7 @@ function Header(props) {
         <Navbar.Brand as={Link} to="/">Captsone React FE</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
+          <Nav activeKey={props.location.pathname} className="ml-auto">
             {authLinks}
           </Nav>
         </Navbar.Collapse>
@@ -80,4 +81,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Header);
+)(withRouter(Header));
