@@ -1,8 +1,9 @@
 import { Switch, Route } from "react-router-dom";
 
-import Home from "./components/home/Home";
-import Feed from "./components/feed/Feed";
-import NotFound from "./components/notFound/NotFound";
+import Home from "./pages/home/Home";
+import Feed from "./pages/feed/Feed";
+import Login from "./pages/login/Login";
+import NotFound from "./pages/notFound/NotFound";
 
 function App() {
   return (
@@ -14,10 +15,17 @@ function App() {
           component={Home}
         />
         <Route
+          exact
+          path="/login"
+          component={Login}
+        />
+        <Route
+          exact
           path="/feed"
           component={Feed}
         />
         <Route
+          exact
           path="*"
           component={NotFound}
         />

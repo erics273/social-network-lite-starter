@@ -2,16 +2,16 @@ import axios from 'axios';
 
 class APIService {
 
-    constructor(url = 'https://socialnetworklite.herokuapp.com', client = axios){
+    constructor(url = process.env.REACT_APP_API_URL || "http://localhost:5000", client = axios) {
         this.url = url;
         this.client = client;
-}
+    }
 
-    login(credentials){
+    login(credentials) {
         return this.client.post(`${this.url}/auth/login`, credentials);
     }
 
-    logout(token){
+    logout(token) {
         const config = {
             headers: { Authorization: `Bearer ${token}` }
         };

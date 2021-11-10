@@ -1,11 +1,9 @@
-import Header from "../header/Header";
-import Login from "../login/Login";
+import Header from "../../components/header/Header";
 
 function Home(props) {
   return (
     <div className="Home">
         <Header/>
-        <Login/>
     </div>
   );
 }

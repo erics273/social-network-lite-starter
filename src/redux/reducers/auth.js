@@ -2,7 +2,7 @@ import * as types from "../actions/actionTypes";
 
 const initialState = {
     token: "",
-    username: ""
+    email: ""
 }
 
 const getInitStateFromStorage = (key, initialState) => {
@@ -31,7 +31,7 @@ export default function authReducer(state = getInitStateFromStorage("auth", init
       return Object.assign({}, state, 
             {
                 token: action.payload.token, 
-                username: action.payload.username
+                email: action.payload.email
             }
         );
     case types.LOGOUT:
