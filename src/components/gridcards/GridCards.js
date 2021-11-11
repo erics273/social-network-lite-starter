@@ -10,7 +10,7 @@ function GridCards(props) {
                 {Array.from({ length: 3 }).map((_, idx) => (
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src="http://via.placeholder.com/100x100" />
+                            <Card.Img variant="top" src="http://via.placeholder.com/300" />
                             <Card.Body>
                                 <Card.Title>Card title</Card.Title>
                                 <Card.Text>
