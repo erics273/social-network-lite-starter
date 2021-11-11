@@ -10,11 +10,11 @@ function UserForm({ handleChange, handleSubmit, formData, isUpdate }) {
             <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="firstName">
                     <Form.Label><strong>First Name:</strong></Form.Label>
-                    <Form.Control required onChange={handleChange} value={formData.firstName} type="text" placeholder="First Name" />
+                    <Form.Control required minLength="2" onChange={handleChange} value={formData.firstName} type="text" placeholder="First Name" />
                 </Form.Group>
                 <Form.Group controlId="lastName">
                     <Form.Label><strong>Last Name:</strong></Form.Label>
-                    <Form.Control required onChange={handleChange} value={formData.lastName} type="text" placeholder="Last Name" />
+                    <Form.Control required minLength="2" onChange={handleChange} value={formData.lastName} type="text" placeholder="Last Name" />
                 </Form.Group>
                 <Form.Group controlId="email">
                     <Form.Label><strong>E-mail:</strong></Form.Label>
