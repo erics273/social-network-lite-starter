@@ -12,6 +12,7 @@ class UpdateUser extends Component {
 
     state = {
         errorMessage: null,
+        successMessage: null,
         formData: {
             firstName: "",
             lastName: "",
@@ -91,8 +92,6 @@ class UpdateUser extends Component {
             }
         }
 
-        console.log(newUserData)
-
         //use fetch to make a POST request with the Data from state that has been populated from
         //the data in the form
         fetch(`http://localhost:5000/api/users/${email}`, {
@@ -105,14 +104,14 @@ class UpdateUser extends Component {
         })
             .then((response) => response.json()) // on success, turn the respons into JSON so we can work with it
             .then((data) => {
-                alert("yay")
+                this.setState({successMessage: "Profile Updated Successfully"})
+                this.getUser(email)
             })
             .catch(e => console.log(e.message)) //console.log any errors if the previous steps fail
 
     }
 
     render() {
-        console.log(this.state)
         return (
             <div className="UpdateUser">
 
@@ -120,6 +119,7 @@ class UpdateUser extends Component {
 
                 <div className="container">
                     {this.state.errorMessage && <Alert variant="danger">{this.state.errorMessage}</Alert>}
+                    {this.state.successMessage && <Alert variant="info">{this.state.successMessage}</Alert>}
                 </div>
 
                 <h3 className="text-center" >Update Your Profile</h3>
