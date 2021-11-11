@@ -5,6 +5,7 @@ import Protected from "./pages/protected/Protected";
 import Login from "./pages/login/Login";
 import NotFound from "./pages/notFound/NotFound";
 import Register from "./pages/register/Register";
+import UpdateUser from "./pages/updateUser/UpdateUser";
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
           exact
           path="/register"
           component={Register}
+        />
+        <Route
+          exact
+          path="/updateuser/:email"
+          component={UpdateUser}
         />
         <Route
           exact
